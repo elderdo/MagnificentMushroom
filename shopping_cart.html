@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shopping Cart</title>
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="cart.css" rel="stylesheet" type="text/css">
+    <script src="store.js"></script>
+
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+
+<!--
+Justin Cernekee
+Index Page
+09/16/18
+< -->
+<a name="toppage">
+
+    <body>
+
+        <main id="body" class="width">
+            <aside id="sidebar" class="column-left">
+
+                <header>
+                    <h1><a href="index.php"><img src="assets/Logo.jpg" style="width:200px;height:125px;"></a></h1>
+
+
+
+                </header>
+
+                <nav id="mainnav">
+                    <ul>
+
+
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li class="dropdown">
+                            <button class="dropdown-btn">Menu &#9660;
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-container">
+                                <a href="menu.html">Menu Page</a>
+                                <a href="starters_salads_and_sides.php">Starters, Salads, Sides</a>
+                                <a href="burgers_and_wraps.php">Burgers, Wraps</a>
+                                <a href="tacos_and_burritos.php">Tacos, Burritos</a>
+                                <a href="entree_bowls.php">Entree Bowls</a>
+                                <a href="kids_menu.php">Kids Menu</a>
+                                <a href="desserts.php">Desserts</a>
+                                <a href="beverages.php">Beverages</a>
+
+                            </div>
+                        </li>
+                        <li><a href="NutritionalPage.html">Nutritional Page</a></li>
+                        <li><a href="gallery_and_social_media.html">Gallery/Social Media</a></li>
+                        <li><a href="Events.html">Events/Specials</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="Careers.html">Career Opportunities</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="shopping_cart.html">Place Your Order Here</a></li>
+                    </ul>
+                </nav>
+
+
+
+            </aside>
+            <script>
+                /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+            <main id="content" class="column-right">
+
+                <h1>
+                    <center>The Magnificent Mushroom</center>
+                </h1>
+                <br>
+
+
+                <br><br><br>
+                <h3>Please Place Your Order:</h3>
+                <section class="container content-section">
+                    <br><br><br>
+                    <h2 class="section-header">Starters-Salads-Sides</h2>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <span class="shop-item-title">Buffalo Cauliflower Bites</span>
+                            <img class="shop-item-image" src="assets/Buffalo Cauliflower Bites(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$5.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Kale Salad</span>
+                            <img class="shop-item-image" src="assets/Kale Salad(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$6.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Tater Tots</span>
+                            <img class="shop-item-image" src="assets/Tater Tots(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$3.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Hummus With Cucumbers</span>
+                            <img class="shop-item-image" src="assets/Hummus With Cucumbers(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$5.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Thai Crunch Salad</span>
+                            <img class="shop-item-image" src="assets/Thai Crunch Salad(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Watermelon Poke</span>
+                            <img class="shop-item-image" src="assets/Watermelon Poke(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$6.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Billy Goat Chips</span>
+                            <img class="shop-item-image" src="assets/Billy Goat Chips(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$1.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container content-section">
+                    <br><br><br><br><br>
+                    <h2 class="section-header">Burgers And Wraps</h2>
+                    <h2>Add billy goat chips for $1 more. / Add housemade coleslaw or tater tots for $2 more. / Add a side kale salad for $3 more.</h2>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <span class="shop-item-title">Sweet Potato Falafels</span>
+                            <img class="shop-item-image" src="assets/Sweet Potato Falafels(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$6.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Sweet Potato Black Bean Burger</span>
+                            <img class="shop-item-image" src="assets/Sweet Potato Black Bean Burger(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$6.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Buffalo Blue Burger</span>
+                            <img class="shop-item-image" src="assets/Buffalo Blue Burger(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$6.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Buffalo Cauliflower Wrap</span>
+                            <img class="shop-item-image" src="assets/Buffalo Cauliflower Wrap(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$7.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Portobello Gyro</span>
+                            <img class="shop-item-image" src="assets/Portobello Gyro(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">The Bbq Jack</span>
+                            <img class="shop-item-image" src="assets/The Bbq Jack(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$7.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Thai Crunch Wrap</span>
+                            <img class="shop-item-image" src="assets/Thai Crunch Wrap(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Tater Tots</span>
+                            <img class="shop-item-image" src="assets/Tater Tots(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$2.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Coleslaw</span>
+                            <img class="shop-item-image" src="assets/Coleslaw(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$2.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Kale Salad</span>
+                            <img class="shop-item-image" src="assets/Kale Salad(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$3.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Billy Goat Chips</span>
+                            <img class="shop-item-image" src="assets/Billy Goat Chips(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$1.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container content-section">
+                    <br><br><br><br><br>
+                    <h2 class="section-header">Tacos And Wraps</h2>
+                    <h2>Add billy goat chips for $1 more. / Add housemade coleslaw or tater tots for $2 more. / Add a side kale salad for $3 more.</h2>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <span class="shop-item-title">Veggie Tacos</span>
+                            <img class="shop-item-image" src="assets/Veggie Tacos(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$7.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Banh Mi Tacos</span>
+                            <img class="shop-item-image" src="assets/Banh Mi Tacos(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$7.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Banh Mi Burrito</span>
+                            <img class="shop-item-image" src="assets/Banh Mi Burrito(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Chipotle Black Bean Burrito</span>
+                            <img class="shop-item-image" src="assets/Chipotle Black Bean Burrito(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$7.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">BBq Jack Tacos</span>
+                            <img class="shop-item-image" src="assets/BBq Jack Tacos(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Spring Roll Burrito</span>
+                            <img class="shop-item-image" src="assets/Spring Roll Burrito(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Kale Salad</span>
+                            <img class="shop-item-image" src="assets/Kale Salad(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$3.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Tater Tots</span>
+                            <img class="shop-item-image" src="assets/Tater Tots(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$2.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Coleslaw</span>
+                            <img class="shop-item-image" src="assets/Coleslaw(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$2.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Billy Goat Chips</span>
+                            <img class="shop-item-image" src="assets/Billy Goat Chips(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$2.00</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container content-section">
+                    <br><br><br><br><br>
+                    <h2 class="section-header">Entree Bowls</h2>
+
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <span class="shop-item-title">Buddha Bowl</span>
+                            <img class="shop-item-image" src="assets/Buddha Bowl(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$9.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Banh Mi Bowl</span>
+                            <img class="shop-item-image" src="assets/Banh Mi Bowl(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$9.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Spring Roll Bowl</span>
+                            <img class="shop-item-image" src="assets/Spring Roll Bowl(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$3.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Chipotle Black Bean Bowl</span>
+                            <img class="shop-item-image" src="assets/Chipotle Black Bean Bowl(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Sushi Bowl</span>
+                            <img class="shop-item-image" src="assets/Sushi Bowl(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$8.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="container content-section">
+                    <br><br><br><br><br>
+                    <h2 class="section-header">Kids Menu</h2>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <span class="shop-item-title">Cauliflower Nuggets</span>
+                            <img class="shop-item-image" src="assets/Cauliflower Nuggets(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$4.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Kids Taco (1)</span>
+                            <img class="shop-item-image" src="assets/Kids Taco(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$2.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Mini Burger (1)</span>
+                            <img class="shop-item-image" src="assets/Mini Burgers(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$3.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">bbq slider (1) </span>
+                            <img class="shop-item-image" src="assets/BBQ Sliders(2).jpg">
+                            <div class="shop-item-details">
+                                <span class="shop-item-price"><strong>$3.95</strong></span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="container content-section">
+                        <br><br><br><br><br>
+                        <h2 class="section-header">Desserts</h2>
+
+                        <div class="shop-items">
+                            <div class="shop-item">
+                                <span class="shop-item-title">Citrus Upside Down </span>
+                                <span class="shop-item-title">Gluten-Free Muffins</span>
+                                <img class="shop-item-image" src="assets/Citrus Upside Down Gluten-Free Muffins(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$5.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Pumpkin Blondies</span>
+                                <img class="shop-item-image" src="assets/Pumpkin Blondies(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$3.65</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Vegan Blueberry Muffins</span>
+                                <img class="shop-item-image" src="assets/Vegan Blueberry Muffins(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$5.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Vegan Apple Spice Cake</span>
+                                <span class="shop-item-title">with Maple Buttercream</span>
+                                <img class="shop-item-image" src="assets/Vegan Apple Spice Cake with Maple Buttercream(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$3.15</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Vegan Banana Bread</span>
+                                <img class="shop-item-image" src="assets/Vegan Banana Bread(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$2.75</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">White Chocolate Cranberry</span>
+                                <span class="shop-item-title">Cookie Bars </span>
+                                <img class="shop-item-image" src="assets/White Chocolate Cranberry Cookie Bars(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$7.95</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Vegan Coconut</span>
+                                <span class="shop-item-title">Doughnuts Bites</span>
+                                <img class="shop-item-image" src="assets/Vegan Coconut Doughnuts(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Vegan Vanilla Faux</span>
+                                <span class="shop-item-title">Ice Cream</span>
+                                <img class="shop-item-image" src="assets/Vegan Vanilla Faux Ice Cream(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$2.69</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Vegan Strawberry</span>
+                                <span class="shop-item-title">Cheesecake Bites </span>
+                                <img class="shop-item-image" src="assets/Vegan Strawberry Cheesecake Bites(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$3.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </section>
+
+                    <section class="container content-section">
+                        <br><br><br><br><br>
+                        <h2 class="section-header">Coffee</h2>
+
+                        <div class="shop-items">
+                            <div class="shop-item">
+                                <span class="shop-item-title">Camano Island Coffee </span>
+                                <span class="shop-item-title"> Roasters, Organic Medium Roast</span>
+                                <img class="shop-item-image" src="assets/Camano Island Coffee Roasters, Organic Medium Roast(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Jungle Coffee Howler</span>
+                                <span class="shop-item-title">Monkey Dark Roast</span>
+                                <img class="shop-item-image" src="assets/Jungle Coffee Gourmet Coffee Beans(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Colombian Organic,</span>
+                                <span class="shop-item-title">Medium Dark Roast</span>
+                                <img class="shop-item-image" src="assets/Colombian Organic, Medium Dark Roast(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">The Bean Coffee </span>
+                                <span class="shop-item-title">Company Mocha Java</span>
+                                <img class="shop-item-image" src="assets/The Bean Coffee Company Mocha Java(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Two Volcanoes Gourmet </span>
+                                <span class="shop-item-title">Espresso Beans,</span>
+                                <span class="shop-item-title">Guatemala Dark Roast</span>
+                                <img class="shop-item-image" src="assets/Two Volcanoes Gourmet Espresso Beans, Guatemala Dark Roast(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Death Wish Coffee, </span>
+                                <span class="shop-item-title">Dark Roast</span>
+                                <img class="shop-item-image" src="assets/Death Wish Coffee, Dark Roast(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Subtle Earth </span>
+                                <span class="shop-item-title">Gourmet Coffee</span>
+                                <img class="shop-item-image" src="assets/Subtle Earth Gourmet Coffee(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Kicking Horse Coffee -</span>
+                                <span class="shop-item-title">Smart Ass</span>
+                                <img class="shop-item-image" src="assets/Kicking Horse Coffee-Smart Ass(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <span class="shop-item-title">Ethical Bean Coffee Sweet </span>
+                                <span class="shop-item-title">Espresso, Medium Dark Roast</span>
+                                <img class="shop-item-image" src="assets/Ethical Bean Coffee Sweet Espresso, Medium Dark Roast(2).jpg">
+                                <div class="shop-item-details">
+                                    <span class="shop-item-price"><strong>$1.99</strong></span>
+                                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <section class="container content-section">
+                            <br><br><br><br><br>
+                            <h2 class="section-header">Beer</h2>
+
+                            <div class="shop-items">
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Bison Honey Basil</span>
+                                    <img class="shop-item-image" src="assets/Bison Honey Basil(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Evergreen IPA </span>
+                                    <span class="shop-item-title">by Peak Organic</span>
+                                    <img class="shop-item-image" src="assets/Evergreen IPA by Peak Organic(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Freedom Organic</span>
+                                    <span class="shop-item-title">Helles Lager</span>
+                                    <img class="shop-item-image" src="assets/Freedom Organic Helles Lager(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Sourlina Peche by </span>
+                                    <span class="shop-item-title">Freehouse Brewery</span>
+                                    <img class="shop-item-image" src="assets/Sourlina Peche by Freehouse Brewery(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Stroud Brewery</span>
+                                    <span class="shop-item-title">Tom Long</span>
+                                    <img class="shop-item-image" src="assets/Stroud Brewery Tom Long(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Hepworth Prospect</span>
+                                    <img class="shop-item-image" src="assets/Hepworth Prospect(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Dr. Jekyll's Beer</span>
+                                    <span class="shop-item-title">Belly Kolsch</span>
+                                    <img class="shop-item-image" src="assets/Dr. Jekyll's Beer Belly Kolsch(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Black Isle Goldeneye</span>
+                                    <img class="shop-item-image" src="assets/Black Isle Goldeneye(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+                                <div class="shop-item">
+                                    <span class="shop-item-title">Samuel Smith Organic</span>
+                                    <span class="shop-item-title">Raspberry Fruit Beer</span>
+                                    <img class="shop-item-image" src="assets/Samuel Smith Organic Raspberry Fruit Beer(2).jpg">
+                                    <div class="shop-item-details">
+                                        <span class="shop-item-price"><strong>$3.99</strong></span>
+                                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <section class="container content-section">
+                                <br><br><br><br><br>
+                                <h2 class="section-header">Kombucha</h2>
+
+                                <div class="shop-items">
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Cosmic Cranberry</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Cosmic Cranberry(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Ginger Berry</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Ginger Berry(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Multigreen</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Multigreen(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Original</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Original(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Raspberry Chia</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Raspberry Chia(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Strawberry Serenity</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Strawberry Serenity(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Tantric Turmeric</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Tantric Turmeric(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Watermelon Wonder</span>
+                                        <span class="shop-item-title">Ice Cream</span>
+                                        <img class="shop-item-image" src="assets/Synergy Kombucha Watermelon Wonder(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <span class="shop-item-title">Mystic Mango</span>
+                                        <span class="shop-item-title">Organic Kombucha</span>
+                                        <img class="shop-item-image" src="assets/Synergy Mystic Mango Organic Kombucha(2).jpg">
+                                        <div class="shop-item-details">
+                                            <span class="shop-item-price"><strong>$1.99</strong></span>
+                                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                    <section class="container content-section">
+                        <h2 class="section-header">CART</h2>
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">ITEM</span>
+                            <span class="cart-price cart-header cart-column">PRICE</span>
+                            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">$0</span>
+                        </div>
+                        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                    </section>
+
+
+
+
+                    <footer class="clear">
+                        <br><br><br><br><a href="#toppage"><img src="assets/Red_Pepper.jpg" width="124" height="60" class="centerfooter"><a />
+                    </footer>
+
+            </main>
+
+            <div class="clear"></div>
+
+        </main>
+
+
+    </body>
+
+</html>
