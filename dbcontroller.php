@@ -15,19 +15,15 @@ class DBController {
 		return $conn;
 	}
 	
-	function runQuery($query) {  
-            
+        function runQuery($query) {
+		$result = mysqli_query($this->conn,$query);
 		while($row=mysqli_fetch_assoc($result)) {
 			$resultset[] = $row;
 		}		
-		if(!empty($resultset)) {
+		if(!empty($resultset))
 			return $resultset;
-                } else {  
-                    throw new Exception("query: $query failed!");
-                    return array();
-                }
 	}
-	
+        
 	function numRows($query) {
 		$result  = mysqli_query($this->conn,$query);
 		$rowcount = mysqli_num_rows($result);
