@@ -23,7 +23,7 @@
         <body>
 
             <main id="body" class="width">
-                <?php include_once('displayShoppingCart.php'); ?>
+                <?php $page = "tacos_and_burritos"; include_once('displayShoppingCart.php'); ?>
                 <aside id="sidebar" class="column-left">
 
                     <header>

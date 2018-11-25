@@ -61,7 +61,7 @@ Index Page
                         <li><a href="reservations.html">Reservations</a></li>
                         <li><a href="Careers.html">Career Opportunities</a></li>
                         <li><a href="contact_us.html">Contact Us</a></li>
-                        <li><a href="shopping_cart.html">Place Your Order Here</a></li>
+                        <li><a href="shopping_cart.php">Place Your Order Here</a></li>
                     </ul>
                 </nav>
 

@@ -23,7 +23,7 @@
         <body>
 
             <main id="body" class="width">
-                <?php include_once('displayShoppingCart.php'); ?>
+                <?php $page = "beverages"; include_once('displayShoppingCart.php'); ?>
                 <aside id="sidebar" class="column-left">
 
                     <header>
@@ -97,13 +97,12 @@
                     }
 
                     // create a div and table for the specified beverage category
-                    function beverageByCategory($category) {
+                    function beverageByCategory($db_handle,$category) {
                         $query = "SELECT id, name, price, category, image";
                         $query .= " FROM tblproduct ";
                         $query .= " WHERE category = '" . $category . "' ";
                         $query .= " ORDER BY display_sequence;";
-                        echo "<h2>Calling runnQuery: $query </h2>";
-                         $product_array = $db_handle->runQuery($query);
+                        $product_array = $db_handle->runQuery($query);
                         echo "<h2>got product_array</h2>";
 
                         if (!empty($product_array)) {
@@ -162,7 +161,7 @@
                     // Define an array with the three Beverage Categories
                     $arr = array("Kombucha", "Organic Coffee", "Organic Beer");
                     foreach ($arr as $category) {
-                        beverageByCategory($category);
+                        beverageByCategory($db_handle,$category);
                     }
                     ?>
                     <br>

@@ -23,7 +23,7 @@
         <body>
 
             <main id="body" class="width">
-                <?php include_once('displayShoppingCart.php'); ?>
+                <?php $page = "entree_bowls"; include_once('displayShoppingCart.php'); ?>
                 <aside id="sidebar" class="column-left">
 
                     <header>

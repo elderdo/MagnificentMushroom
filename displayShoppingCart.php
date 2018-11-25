@@ -1,7 +1,7 @@
 <div id="shopping-cart" align="center">
     <div class="txt-heading">Shopping Cart</div>
 
-    <a id="btnEmpty" href="starters_salads_and_sides.php?action=empty">Empty Cart</a>
+    <a id="btnEmpty" href="<?php echo $GLOBALS['page'];?>.php?action=empty">Empty Cart</a>
     <?php
     if (isset($_SESSION["cart_item"])) {
         $total_quantity = 0;
@@ -25,7 +25,7 @@
                         <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
                         <td  style="text-align:right;"><?php echo "$ " . $item["price"]; ?></td>
                         <td  style="text-align:right;"><?php echo "$ " . number_format($item_price, 2); ?></td>
-                        <td style="text-align:center;"><a href="starters_salads_and_sides.php?action=remove&code=<?php echo $item["id"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
+                        <td style="text-align:center;"><a href="<?php echo $GLOBALS['page'];?>.php?action=remove&code=<?php echo $item["id"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
                     </tr>
                     <?php
                     $total_quantity += $item["quantity"];
